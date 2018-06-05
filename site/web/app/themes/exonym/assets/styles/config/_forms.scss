@@ -134,6 +134,10 @@ input[type="week"],
 input[list] {
 	height: $fh-input-height;
 	appearance: none;
+
+	&::placeholder { @include fontItalic(); opacity: 0.5; }
+	&:-ms-input-placeholder { @include fontItalic(); opacity: 0.5; }
+	&::-ms-input-placeholder { @include fontItalic(); opacity: 0.5; }
 }
 
 /* Other */
@@ -141,6 +145,10 @@ input[list] {
 textarea {
 	appearance: none;
 	overflow: auto;
+
+	&::placeholder { @include fontItalic(); opacity: 0.5; }
+	&:-ms-input-placeholder { @include fontItalic(); opacity: 0.5; }
+	&::-ms-input-placeholder { @include fontItalic(); opacity: 0.5; }
 }
 
 input[type="range"] {

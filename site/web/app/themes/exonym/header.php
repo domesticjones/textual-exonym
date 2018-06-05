@@ -14,7 +14,14 @@
 	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
 		<div id="container">
 			<header id="header-contact">
-				asdf
+				<div class="header-contact-inner">
+					<?php echo do_shortcode('[contact-form-7 id="25" title="Contact form 1"]'); ?>
+					<div class="header-contact-public">
+						<h2>Connect with Textual</h2>
+						<?php ex_social(); ?>
+						<?php ex_contact('email'); ?>
+					</div>
+				</div>
 			</header>
       <header id="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
         <a href="<?php echo get_home_url(); ?>">
