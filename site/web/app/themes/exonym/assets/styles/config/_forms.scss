@@ -8,8 +8,8 @@ $fh-font-size: $font-size !default;
 $fh-font-color: $black !default;
 
 // Borders
-$fh-border-radius: 5px !default;
-$fh-border-width: 1px !default;
+$fh-border-radius: 0 !default;
+$fh-border-width: 2px !default;
 $fh-border-style: solid !default;
 $fh-border-color: $black !default;
 
@@ -18,7 +18,7 @@ $fh-input-height: 2.5em !default;
 $fh-input-width: 100% !default;
 $fh-input-max-width: auto !default;
 $fh-input-bg-color: $white !default;
-$fh-focus-bg-color: $grey !default;
+$fh-focus-bg-color: $white !default;
 $fh-focus-border-color: $fh-border-color !default;
 $fh-focus-font-color: $fh-font-color !default;
 
@@ -30,8 +30,8 @@ $fh-fieldset-bare: true !default;
 
 // Buttons & Input Submits
 $fh-button-height: 2.5em !default;
-$fh-button-width: 100% !default;
-$fh-button-max-width: auto !default;
+$fh-button-width: auto !default;
+$fh-button-max-width: 100% !default;
 $fh-button-font-color: $fh-font-color !default;
 $fh-button-bg-color: $fh-focus-bg-color !default;
 $fh-button-hover-bg-color: $fh-border-color !default;
@@ -231,20 +231,43 @@ input[type="button"],
 input[type="submit"],
 input[type="reset"],
 input[type="image"] {
-	height: $fh-button-height;
+	height: 2.5rem;
 	width: $fh-button-width;
 	max-width: $fh-button-max-width;
 	background-color: $fh-button-bg-color;
-	padding: $fh-input-height / 5;
+	padding: 0 0 0 1rem;
 	cursor: pointer;
+	@include fontBold();
+	font-family: $font-heading;
 
 	color: $fh-button-font-color;
-	font-weight: 700;
 
 	appearance: none;
 
 	border-radius: $fh-border-radius;
 	border: $fh-border-width $fh-border-style $fh-border-color;
+}
+
+button {
+	@include grid(center, center);
+	line-height: 1;
+	text-transform: uppercase;
+	font-size: 0.85rem;
+}
+
+.button-arrow {
+	display: block;
+	border-left: 2px solid $black;
+	height: 2.25rem;
+	width: 2.5rem;
+	margin-left: 1rem;
+
+	svg {
+		margin: 0.6rem 0 0 0.75rem;
+		display: block;
+		height: 1rem;
+		width: 1rem;
+	}
 }
 
 input[type="image"] {
