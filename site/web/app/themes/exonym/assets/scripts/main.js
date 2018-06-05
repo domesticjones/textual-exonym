@@ -6,35 +6,16 @@ jQuery(document).ready(() => {
   $('#container iframe, #container embed, #container video').not('.ignore-ratio').wrap('<div class="video-container" />');
 
   // HEADER: Responsive Nav Toggle
-    $('#responsive-nav-toggle').click(e => {
-      const $this = $(e.currentTarget);
-      $this.toggleClass('is-active');
-    });
-
-  // MODULE: Slideshow
-  $('.module-slideshow-container').each((i,e) => {
-    const $this = $(e);
-    $this.slick({
-      adaptiveHeight: true,
-      appendDots: $this.prev('.slideshow-nav'),
-      appendArrows: $this.prev('.slideshow-nav'),
-    });
+  $('#responsive-nav-toggle').click(e => {
+    const $this = $(e.currentTarget);
+    $this.toggleClass('is-active');
   });
 
-  // MODULE: Carousel
-  $('.carousel-wrapper').each((i,e) => {
-    const $this = $(e);
-    $this.slick({
-      adaptiveHeight: true,
-      appendDots: $this.prev('.slideshow-nav'),
-      appendArrows: $this.prev('.slideshow-nav'),
-    });
-  });
-
-  // MODULE: Gallery Slideshow
-  $('.module-gallery-slideshow').slick({
-    adaptiveHeight: true,
-    fade: true,
+  // HEADER: Contact Toggle
+  $('#header-contact-button').click(e => {
+    const $this = $(e.currentTarget);
+    $this.toggleClass('is-active');
+    $('#header-contact').slideToggle();
   });
 
   // MODULES: Parallax

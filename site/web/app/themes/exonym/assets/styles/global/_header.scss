@@ -65,10 +65,25 @@
   &:hover {
     background-color: $blue;
   }
+
+  &.is-active .button-arrow svg {
+    transform: rotate(-90deg);
+  }
+
+  .button-arrow svg {
+    transform: rotate(0);
+    @include transition(all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55));
+  }
 }
 
 #responsive-nav-toggle {
   display: none;
+}
+
+#header-contact {
+  display: none;
+  background-color: $black;
+  color: $white;
 }
 
 /** Responsive Breakpoints
