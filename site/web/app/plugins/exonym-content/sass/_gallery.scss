@@ -1,0 +1,29 @@
+.module-gallery-wrap {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    @include grid(center, center);
+    margin: 0;
+    padding: 0;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.gallery-wrap {
+  &-between { @include grid(space-between, stretch, row, wrap); }
+  &-around { @include grid(space-around, stretch, row, wrap); }
+  &-center { @include grid(center, stretch, row, wrap); }
+  &-start { @include grid(flex-start, stretch, row, wrap); }
+  &-end { @include grid(flex-end, stretch, row, wrap); }
+}
+
+.gallery-item-align {
+  &-top img { margin-bottom: auto; }
+  &-bottom img { margin-top: auto; }
+}

@@ -1,0 +1,40 @@
+.module-staff-wrap {
+  @include grid(center, stretch, row, wrap);
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.staff-inner {
+  position: relative;
+  height: 100%;
+}
+
+.staff-info-image {
+  display: block;
+
+  span {
+    display: none;
+  }
+}
+
+.staff-info-contact-methods {
+  @include grid(center, center);
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.staff-info-contact-link {
+  display: block;
+
+  img {
+    display: block;
+  }
+}

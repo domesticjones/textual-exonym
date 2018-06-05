@@ -1,0 +1,22 @@
+// Heading Color Function
+@mixin headingColor($color) {
+  @for $i from 1 through 6 {
+    h#{$i} { color: $color; }
+  }
+}
+
+@each $name, $value in $color-scheme {
+  // BG Color
+  .module-bg-#{$name} { background-color: $value; }
+  // Text Color
+  .module-text-#{$name} { color: $value; }
+  // Link Color
+  .module-link-#{$name} { @include linkColor($value, all); }
+  // Heading Color
+  .module-heading-#{$name} { @include headingColor($value); }
+  // CTA BG's
+  .module-ctas a.cta-bg-#{$name} { background-color: $value; }
+  .module-ctas a.cta-bg-#{$name}:focus { background-color: $value; }
+  // CTA Colors
+  @include linkColor($value, all, '.module-ctas a.cta-#{$name}');
+}

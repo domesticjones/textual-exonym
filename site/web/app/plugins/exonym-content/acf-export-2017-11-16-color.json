@@ -1,0 +1,54 @@
+[
+    {
+        "key": "group_59f4f4bc0bc8f",
+        "title": "ExCon - Setting - Global Color",
+        "fields": [
+            {
+                "key": "field_59f4f4c90fb26",
+                "label": "Color",
+                "name": "color",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "admin-color-scheme",
+                    "id": ""
+                },
+                "choices": {
+                    "blue": "Blue",
+                    "bluelt": "Light Blue",
+                    "white": "White",
+                    "grey": "Grey",
+                    "greylt": "Light Grey",
+                    "black": "Black"
+                },
+                "default_value": [],
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "ajax": 0,
+                "return_format": "value",
+                "placeholder": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "page"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 0,
+        "description": ""
+    }
+]

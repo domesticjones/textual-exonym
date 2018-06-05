@@ -1,0 +1,35 @@
+/** Configuration Components
+ ---------------------------------------------------------*/
+@import
+  'config/effects',
+  'config/functions',
+  'config/grid',
+  'config/reset',
+  'config/colors',
+  'config/typography',
+  'config/forms',
+  'config/hamburger'
+;
+
+/** Global Elements
+ ---------------------------------------------------------*/
+@import
+  'global/base',
+  'global/navigation',
+  'global/header',
+  'global/footer',
+  '../../node_modules/slick-carousel/slick/slick.scss',
+  'global/slick'
+;
+
+/** Exonym Plugins
+ ---------------------------------------------------------*/
+@import
+  // Exonym Content
+  '../../../../plugins/exonym-content/sass/exonym-content.scss',
+  'modules/exCon-animation',
+  'modules/exCon-modules',
+  // Exonym Staff
+  '../../../../plugins/exonym-staff/exonym-staff.scss',
+  'modules/exStaff'
+;

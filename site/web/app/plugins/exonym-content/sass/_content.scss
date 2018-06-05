@@ -1,0 +1,26 @@
+.module-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
+}
+
+/** Alignment
+ ---------------------------------------------------------*/
+.module-align-left { margin-right: auto; }
+.module-align-right { margin-left: auto; }
+.module-align-top { margin-bottom: auto; }
+.module-align-bottom { margin-top: auto; }
+
+/** Breakpoints
+ ---------------------------------------------------------*/
+@media (max-width: 1024px) {
+  .module-inner {
+    min-width: 75%;
+  }
+}
+
+@media (max-width: 768px) {
+  .module-inner {
+    min-width: 100%;
+  }
+}
