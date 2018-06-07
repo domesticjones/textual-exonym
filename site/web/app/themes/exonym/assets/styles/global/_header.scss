@@ -64,6 +64,10 @@
 
   &:hover {
     background-color: $blue;
+
+    .button-arrow {
+      border-color: $blue;
+    }
   }
 
   &.is-active .button-arrow svg {
@@ -91,7 +95,7 @@
   }
 
   .wpcf7-form {
-    @include grid();
+    @include grid(flex-end, stretch);
   }
 
   .contact-form-column {
@@ -99,6 +103,11 @@
 
     &.first {
       margin-right: 2rem;
+    }
+
+    &.response {
+      @include grid(center, center);
+      margin-right: 1rem;
     }
   }
 
@@ -152,7 +161,7 @@
   }
 
   textarea {
-    height: 8.75rem;
+    height: 8.5rem;
   }
 
   br {
@@ -219,15 +228,68 @@
   }
 }
 
+.wpcf7-response-output {
+  padding: 1rem;
+  background-color: $blue;
+}
+
+.wpcf7-display-none {
+  display: none;
+}
+
+.screen-reader-response {
+  display: none;
+}
+
+.wpcf7-form-control-wrap {
+  display: block;
+  position: relative;
+}
+
+.wpcf7-not-valid-tip {
+  position: absolute;
+  background-color: $grey;
+  text-transform: uppercase;
+  color: $black;
+  line-height: 2.25rem;
+  top: 0.15rem;
+  right: 0.15rem;
+  padding: 0 0.5rem;
+}
+
+#responsive-nav-toggle {
+  @include hamburgerMenu(1, $black, 0.6);
+  display: none;
+}
+
+
 /** Responsive Breakpoints
  ---------------------------------------------------------*/
+@media (max-width: 1300px) {
+  .contact-form-column input,
+  .contact-form-column textarea {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .header-contact-public {
+    display: none;
+  }
+}
+
 @media (max-width: 1024px) {
-  .header-top {
+  #header {
     padding: 1rem;
   }
 
-  .nav-header {
+  .nav-header,
+  #header-contact-button {
     display: none;
+  }
+
+  #header-contact {
+    display: none !important;
   }
 
   #responsive-nav-toggle {

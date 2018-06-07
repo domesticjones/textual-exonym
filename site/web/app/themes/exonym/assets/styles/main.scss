@@ -8,7 +8,8 @@
   'config/colors',
   'config/typography',
   'config/forms',
-  'config/hamburger'
+  'config/hamburger',
+  'config/animation'
 ;
 
 /** Global Elements
@@ -22,8 +23,11 @@
   'global/slick'
 ;
 
-/** Exonym Plugins
+/** Global Modules
  ---------------------------------------------------------*/
 @import
-  'modules/exCon-animation'
+  'modules/header-hero'
 ;
+
+/** Page Templates
+ ---------------------------------------------------------*/
