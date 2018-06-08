@@ -1,0 +1,25 @@
+.page-template-page-home {
+  .module-features {
+    background-color: $blue;
+    color: $white;
+
+    button {
+      border-color: $white;
+      background-color: transparent;
+      color: $white;
+      @include transition();
+
+      .button-arrow {
+        border-color: $white;
+
+        svg {
+          fill: $white;
+        }
+      }
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

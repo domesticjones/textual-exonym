@@ -26,8 +26,12 @@
 /** Global Modules
  ---------------------------------------------------------*/
 @import
-  'modules/header-hero'
+  'modules/header-hero',
+  'modules/features'
 ;
 
 /** Page Templates
  ---------------------------------------------------------*/
+@import
+ 'templates/page-home'
+;

@@ -10,7 +10,7 @@
       <?php if(!empty($headerData['headline'])) { echo '<h1>' . $headerData['headline'] . '</h1>'; } ?>
       <?php if(!empty($headerData['description'])) { echo '<p>' . $headerData['description'] . '</p>'; } ?>
       <?php if(!empty($headerData['button'])): ?>
-        <a href="<?php echo $headerData['button']['url']; ?>">
+        <a href="<?php echo $headerData['button']['url']; ?>" target="<?php echo  $headerData['button']['target']; ?>">
           <button type="button">
             <span><?php echo $headerData['button']['title']; ?></span>
             <span class="button-arrow"><?php echo file_get_contents(asset_path('images/icon-arrow.svg')); ?></span>
