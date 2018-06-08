@@ -12,6 +12,7 @@
 
 .feature-heading {
   @include grid(center, center);
+  margin-top: 2rem;
 }
 
 .feature-heading-icon {

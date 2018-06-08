@@ -1,3 +1,55 @@
+#footer {
+  @include grid(center, center, row, wrap);
+  padding: 2rem;
+  background-color: $black;
+  color: $white;
+  @include linkColor($white);
+
+  .nav-social {
+    width: 100%;
+
+    ul {
+      @include listStripped();
+      @include grid(center, center);
+      margin-top: 2rem;
+
+      li {
+        width: 2rem;
+        margin: 1em;
+
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.footer-logo {
+  width: 12rem;
+  margin: 2rem;
+
+  svg {
+    width: 100%;
+    height: auto;
+    fill: $white;
+  }
+}
+
 .nav-footer {
   @include navMenu(vertical);
+  margin: 0 2rem;
+
+  h2 {
+    text-transform: uppercase;
+    border-bottom: 1px solid $grey;
+    font-size: 1.25em;
+    padding: 0.5em 1em 0.5em 0;
+    margin-bottom: 1em;
+  }
+}
+
+.copyright {
+  padding-bottom: 0;
+  font-size: 0.85em;
 }
