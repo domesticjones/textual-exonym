@@ -29,6 +29,7 @@
       <?php ex_social(); ?>
       <p class="copyright">&copy; Copyright <?php ex_brand('legal'); ?></p>
     </footer>
+    <?php get_template_part('templates/nav', 'responsive'); ?>
   </div>
   <?php wp_footer(); ?>
 </body>

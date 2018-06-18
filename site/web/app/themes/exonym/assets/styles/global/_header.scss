@@ -1,7 +1,8 @@
 #header {
   @include grid(space-between, center);
+  position: relative;
   padding: 1rem 2rem;
-  z-index: 9999;
+  z-index: 999;
   width: 100%;
   background-color: $white;
 }
@@ -279,7 +280,14 @@
 }
 
 @media (max-width: 1024px) {
+  #container {
+    padding-top: 4rem;
+  }
+
   #header {
+    position: fixed;
+    top: 0;
+    left: 0;
     padding: 1rem;
   }
 
@@ -288,11 +296,31 @@
     display: none;
   }
 
-  #header-contact {
-    display: none !important;
-  }
-
   #responsive-nav-toggle {
     display: block;
+  }
+}
+
+@media (max-width: 800px) {
+  .header-contact-inner {
+    @include grid(center, center);
+    margin: 0;
+
+    .wpcf7 {
+      width: 100%;
+      padding: 1rem 0;
+    }
+  }
+  #header-contact .wpcf7-form {
+    @include grid(center, center, column);
+    width: 100%;
+  }
+
+  #header-contact .contact-form-column {
+    margin: 0;
+  }
+
+  #header-contact button {
+    margin: 0 auto;
   }
 }

@@ -7,8 +7,18 @@ jQuery(document).ready(() => {
 
   // HEADER: Responsive Nav Toggle
   $('#responsive-nav-toggle').click(e => {
+    e.preventDefault();
     const $this = $(e.currentTarget);
     $this.toggleClass('is-active');
+    $('#nav-responsive').toggleClass('is-active');
+  });
+
+  // HEADER: Responsive Nav Contact
+  $('#responsive-contact-button').click(() => {
+    $('html, body').animate({ scrollTop: 0 }, 1500);
+    $('#nav-responsive, #responsive-nav-toggle').removeClass('is-active');
+    $('#header-contact').slideDown();
+    $('#header-contact-button').addClass('is-active');
   });
 
   // HEADER: Contact Toggle
