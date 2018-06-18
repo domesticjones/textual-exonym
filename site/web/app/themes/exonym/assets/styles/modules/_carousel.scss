@@ -1,0 +1,158 @@
+#module-carousel {
+  margin: 6rem auto;
+  position: relative;
+}
+
+.carousel-container {
+  position: relative;
+  background-color: $grey;
+  padding: 6rem 2rem 6rem 22.5%;
+  width: 75%;
+  margin-left: auto;
+
+  img {
+    height: 4rem;
+    width: auto;
+  }
+
+  h2,
+  h3 {
+    color: $blue;
+  }
+
+  h3 {
+    font-size: 1.25em;
+    margin: 0.5em 0 2em 0;
+  }
+}
+
+.carousel-quote {
+  @include fontItalic();
+  padding-bottom: 1em;
+  color: $black;
+}
+
+.carousel-text {
+  font-size: 0.85em;
+  margin-top: 0.75em;
+  color: $black;
+
+  p {
+    line-height: 1.25;
+  }
+}
+
+.carousel-button {
+  button {
+    background-color: transparent;
+    border-color: $blue;
+    color: $blue;
+    transform-origin: left;
+    @include transition();
+
+    .button-arrow {
+      border-color: $blue;
+
+      svg {
+        fill: $blue;
+      }
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.carousel-images {
+  position: absolute;
+  left: -25%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%;
+
+  .slick-slide {
+    height: 20rem;
+    background-size: cover;
+    background-position: center top;
+  }
+}
+
+.carousel-images-nav {
+  @include grid(center);
+  margin: 0;
+
+  button {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: transparent;
+    height: auto;
+
+    .button-arrow {
+      margin: 0;
+      border: none;
+      background-color: $blue;
+      @include transition();
+
+      svg {
+        margin-left: 9px;
+      }
+
+      &:hover {
+        background-color: $black;
+      }
+    }
+  }
+}
+
+.carousel-images-prev .button-arrow {
+  transform: rotate(180deg);
+}
+
+.carousel-images-nav-label {
+  display: none;
+}
+
+#carousel-count {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+
+  .slick-dots {
+    @include grid();
+
+    li {
+      width: auto;
+      height: auto;
+    }
+
+    button {
+      width: 4rem;
+      height: 0.5rem;
+      border: 1px solid $blue;
+      border-radius: 0;
+      margin: 0;
+      padding: 0;
+
+      &::after {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        background-color: $white;
+        @include transition();
+      }
+    }
+
+    .slick-active button::after {
+      background-color: $blue;
+    }
+  }
+}
+
+#carousel-count-number {
+  text-align: right;
+  font-size: 0.85em;
+  @include fontBold();
+  line-height: 2;
+}

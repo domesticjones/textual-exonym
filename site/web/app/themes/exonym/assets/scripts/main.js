@@ -56,4 +56,24 @@ jQuery(document).ready(() => {
       }
     });
   });
+
+  // MODULE: Carousel
+  $('#module-carousel').slick({
+    slide: 'div',
+    arrows: false,
+    dots: true,
+    appendDots: $('#carousel-count'),
+    adaptiveHeight: true,
+  });
+  $('#module-carousel').on('afterChange', () => {
+    const i = $('#module-carousel > .slick-list > .slick-track > .slick-active').data('slick-index') + 1;
+    $('#carousel-count-number .current').text(i);
+  });
+  $('.carousel-images').slick({
+    slide: 'div',
+    fade: true,
+    autoplay: true,
+    prevArrow: $('.carousel-images-prev'),
+    nextArrow: $('.carousel-images-next'),
+  });
 });
