@@ -64,6 +64,10 @@ jQuery(document).ready(() => {
     dots: true,
     appendDots: $('#carousel-count'),
     adaptiveHeight: true,
+    autoplay: true,
+    autoplaySpeed: 10000,
+    speed: 2250,
+    pauseOnHover: false,
   });
   $('#module-carousel').on('afterChange', () => {
     const i = $('#module-carousel > .slick-list > .slick-track > .slick-active').data('slick-index') + 1;

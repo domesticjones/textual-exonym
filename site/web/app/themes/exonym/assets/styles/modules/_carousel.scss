@@ -156,3 +156,33 @@
   @include fontBold();
   line-height: 2;
 }
+
+@media (max-width: 1024px) {
+  #module-carousel {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .carousel-container {
+    width: 100%;
+    padding: 4rem 2rem;
+  }
+
+  .carousel-quote {
+    margin-top: 60vw;
+  }
+
+  .carousel-images {
+    height: 50vw;
+    width: calc(100% - 4rem);
+    top: 10.75rem;
+    left: 2rem;
+    bottom: auto;
+    transform: none;
+
+    .slick-slide {
+      height: 50vw;
+      width: 100%;
+    }
+  }
+}

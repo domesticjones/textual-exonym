@@ -6,6 +6,7 @@
 
   li {
     width: 25%;
+    min-width: 300px;
     padding: 1rem;
   }
 }
@@ -53,8 +54,21 @@
 
 .feature-button {
   width: 100%;
+  min-width: 100% !important;
 
   a {
     @include grid(center, center);
+  }
+}
+
+@media (max-width: 1024px) {
+  .module-features li {
+    width: 50%;
+  }
+}
+
+@media (max-width: 650px) {
+  .module-features li {
+    width: 100%;
   }
 }
